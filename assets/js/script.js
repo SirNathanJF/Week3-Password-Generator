@@ -60,7 +60,7 @@ function generatePassword(){
 
     if (useSymbols == true){
       passwordMakeup = passwordMakeup.concat(symbols);
-      window.alert("You have selected symbopls for use in your password!")
+      window.alert("You have selected symbols for use in your password!")
     }
 
   //Adds an alert if no options are chosen, returns to beginning.  
