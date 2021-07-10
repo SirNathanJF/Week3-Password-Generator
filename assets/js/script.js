@@ -36,6 +36,7 @@ function generatePassword(){
 
     if (useLowercase == true){
       passwordMakeup = passwordMakeup.concat(lowercase);
+      window.alert("You have selected lowercase letters for use in your password!")
     }
 
   //Adds a confirmation box for upper case letters, and tells the function to add uppercase array to password makeup
@@ -43,6 +44,7 @@ function generatePassword(){
 
     if (useUppercase == true){
       passwordMakeup = passwordMakeup.concat(uppercase);
+      window.alert("You have selected uppercase letters for use in your password!")
     }
 
   //Adds a confirmation box for numbers, and tells the function to add numbers array to password makeup  
@@ -50,6 +52,7 @@ function generatePassword(){
 
     if (useNumbers == true){
       passwordMakeup = passwordMakeup.concat(numbers);
+      window.alert("You have selected numbers for use in your password!")
     }
 
   //Adds a confirmation box for symbols, and tells the function to add symbols array to password makeup   
@@ -57,6 +60,7 @@ function generatePassword(){
 
     if (useSymbols == true){
       passwordMakeup = passwordMakeup.concat(symbols);
+      window.alert("You have selected symbopls for use in your password!")
     }
 
   //Adds an alert if no options are chosen, returns to beginning.  
@@ -96,5 +100,5 @@ copy.addEventListener("click", function(){
 function copyPassword(){
   document.getElementById("password").select();
   document.execCommand("Copy");
-  alert("Password copied to clipboard!"); 
+  window.alert("Password copied to clipboard!"); 
 }
