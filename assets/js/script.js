@@ -9,44 +9,54 @@ let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 let symbols = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
 
-const passwordLength = window.prompt("How long would you like your password to be? You may choose any valuebetween 8 and 128 characters.");
+function generatePassword(){
 
-if (!(passwordLength >= 8 && passwordLength <= 128)){
-  alert("Please provide a value between 8 and 128 characters.")
-  return;
-}
+  const passwordLength = window.prompt("How long would you like your password to be? You may choose any valuebetween 8 and 128 characters.");
 
-let passwordMakeup = [];
-
-let password = "";
-
-let useLowercase = window.confirm("Would you like to include lowercase letters?");
-
-  if (useLowercase == true){
-    passwordMakeup = passwordMakeup.concat(lowercase);
+  if (!(passwordLength >= 8 && passwordLength <= 128)){
+    alert("Please provide a value between 8 and 128 characters.")
+    return;
   }
 
-let useUppercase = window.confirm("Would you like to include uppercase letters?");
+  let passwordMakeup = [];
 
-  if (useUppercase == true){
-    passwordMakeup = passwordMakeup.concat(uppercase);
+  let password = "";
+
+  let useLowercase = window.confirm("Would you like to include lowercase letters?");
+
+    if (useLowercase == true){
+      passwordMakeup = passwordMakeup.concat(lowercase);
+    }
+
+  let useUppercase = window.confirm("Would you like to include uppercase letters?");
+
+    if (useUppercase == true){
+      passwordMakeup = passwordMakeup.concat(uppercase);
+    }
+
+  let useNumbers = window.confirm("Would you like to include numbers?");
+
+    if (useNumbers == true){
+      passwordMakeup = passwordMakeup.concat(numbers);
+    }
+
+  let useSymbols = window.confirm("Would you like to include symbols?");
+
+    if (useSymbols == true){
+      passwordMakeup = passwordMakeup.concat(symbols);
+    }
+
+  if (!useLowercase && !useUppercase && !useNumbers && !useSymbols){
+    window.alert("One of the 4 criteria must be selected to continue.")
+    return;
   }
 
-let useNumbers = window.confirm("Would you like to include numbers?");
-
-  if (useNumbers == true){
-    passwordMakeup = passwordMakeup.concat(numbers);
+  while (password.length < passwordLength){
+    let randomChoice = passwordMakeup[Math.floor(Math.random() * passwordMakeup.length)]
+    password += randomChoice
   }
 
-let useSymbols = window.confirm("Would you like to include symbols?");
-
-  if (useSymbols == true){
-    passwordMakeup = passwordMakeup.concat(symbols);
-  }
-
-if (!useLowercase && !useUppercase && !useNumbers && !useSymbols){
-  window.alert("One of the 4 criteria must be selected to continue.")
-  return;
+  return password;
 }
 
 function writePassword() {
