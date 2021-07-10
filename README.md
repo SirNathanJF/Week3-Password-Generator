@@ -9,7 +9,7 @@ This is Week 3's homework assignment for the bootcamp. Our assignment was to wri
 
 ## Screenshot and link to deployed application
 ![A photo of the application](https://github.com/SirNathanJF/Week3-Password-Generator/blob/main/assets/images/PasswordGeneratorScreenshot.PNG)<br>
-[Link to deployed application](https://sirnathanjf.github.io/Week3-Password-Generator/)
+<a href="https://sirnathanjf.github.io/Week3-Password-Generator/" target="_blank">Link to deployed application</a>
 
 ## User Story
 ```
