@@ -8,7 +8,7 @@ This is Week 3's homework assignment for the bootcamp. Our assignment was to wri
     4. My Experience
 
 ## Screenshot and link to deployed application
-![A photo of the application](./assets/images/PasswordGeneratorScreenshot.png)<br>
+![A photo of the application](https://github.com/SirNathanJF/Week3-Password-Generator/blob/main/assets/images/PasswordGeneratorScreenshot.PNG)<br>
 [Link to deployed application](https://sirnathanjf.github.io/Week3-Password-Generator/)
 
 ## User Story
